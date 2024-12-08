@@ -1,0 +1,213 @@
+/* Body with Background Image */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('background.jpg') no-repeat center bottom; /* Replace 'background.jpg' with your image path */
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative; /* Set positioning for layer management */
+    z-index: 0; /* Lowest layer */
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Text in the Absolute Left Corner of the Page */
+.absolute-left {
+    position: fixed; /* Fixed positioning to stay in the same place on the screen */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    font-size: 12px; /* Small font size */
+    color: #ffffff; /* White text */
+    font-weight: 300; /* Light font weight */
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: semi-transparent background for readability */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    z-index: 1000; /* High z-index to ensure it appears above all other elements */
+}
+
+
+.error-message {
+    color: #d9534f; /* Red color for error */
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Start Button */
+.start-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0073e6; /* Blue background color */
+    color: white; /* White text color */
+    cursor: pointer;
+}
+
+.start-btn:hover {
+    background-color: #005bb5; /* Darker blue when hovered */
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 26px; /* Larger font size for emphasis */
+    font-weight: bold;
+    color: #0056b3; /* Darker blue for contrast */
+    margin-bottom: 15px;
+    text-align: left;
+    text-transform: capitalize; /* Capitalize each word for readability */
+    letter-spacing: 1px; /* Slight letter spacing for elegance */
+    transition: color 0.3s ease-in-out, transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Add hover effect to labels */
+label:hover {
+    color: #0073e6; /* Brighter blue on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Title Container */
+.title-container {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative; /* Ensures it stays above the background */
+    z-index: 1; /* Higher layer */
+}
+
+.title-container h1 {
+    font-size: 50px;
+    color:#FFFFFF;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Main Container */
+.container {
+    width: 80%;
+    max-width: 900px;
+    background: white; /* White background for content */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 40px 50px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    position: relative; /* Ensure it stays above the background */
+    z-index: 1; /* Higher layer */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide Styles */
+.slide {
+    display: none;
+    font-size: 20px;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Inputs and Dropdowns */
+select, input[type="number"] {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    margin-bottom: 30px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #0073e6; /* Focused blue border */
+    box-shadow: 0 0 8px rgba(0, 115, 230, 0.6);
+    background-color: #eef6ff; /* Slightly darker background */
+    color: #0056b3; /* Darker text on focus */
+}
+
+/* Dropdown Options Styling */
+option {
+    font-size: 18px; /* Slightly smaller than dropdown text */
+    font-weight: normal; /* Regular weight for better readability */
+    color: #333;
+    padding: 10px; /* Add padding to options */
+}
+
+/* Option Hover Effects */
+option:hover {
+    background-color: #f0f8ff; /* Light blue background */
+    color: #0056b3; /* Blue text */
+}
+
+/* Buttons */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 10px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.next-btn {
+    background-color: #28a745; /* Green */
+}
+
+/* Calculate Button */
+button#calculate-btn {
+    background-color: #28a745; /* Green */
+}
+
+button#calculate-btn:hover {
+    background-color: #1d7a32; /* Darker green for hover */
+}
+
+button.prev-btn {
+    background-color: #f0ad4e; /* Orange */
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background-color: #1d7a32; /* Darker green for hover */
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Add Subtle Animations for User Feedback */
+button:active {
+    transform: translateY(2px);
+}
+
+/* Result Text */
+#final-value {
+    font-size: 50px;
+    color: #28a745;
+    margin-top: 20px;
+}

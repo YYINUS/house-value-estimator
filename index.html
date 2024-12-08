@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equihome</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <p class="absolute-left">Currently only available for Ames, Iowa</p>
+    <!-- Title Section -->
+    <div id="title-container" class="title-container">
+        <h1>Equihome</h1>
+        <button id="start-btn" class="start-btn">Start</button>
+    </div>
+
+    <!-- Form Section -->
+    <div id="form-container" class="container hidden">
+        <form id="houseForm">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <label for="neighborhood">Neighborhood:</label>
+                <select id="neighborhood" name="neighborhood" required>
+                    <option value="" disabled selected>Select a neighborhood</option>
+                    <option value="7">Bloomington Heights</option>
+                    <option value="20">Bluestem</option>
+                    <option value="4">Briardale</option>
+                    <option value="14">Brookside</option>
+                    <option value="15">Clear Creek</option>
+                    <option value="18">College Creek</option>
+                    <option value="19">Crawford</option>
+                    <option value="17">Edwards</option>
+                    <option value="2">Gilbert</option>
+                    <option value="21">Iowa DOT and Rail Road</option>
+                    <option value="24">Meadow Village</option>
+                    <option value="22">Mitchell</option>
+                    <option value="1">North Ames</option>
+                    <option value="8">Northridge</option>
+                    <option value="5">Northpark Villa</option>
+                    <option value="6">Northridge Heights</option>
+                    <option value="12">Northwest Ames</option>
+                    <option value="13">Old Town</option>
+                    <option value="16">South & West of Iowa State University</option>
+                    <option value="11">Sawyer</option>
+                    <option value="10">Sawyer West</option>
+                    <option value="9">Somerset</option>
+                    <option value="3">Stone Brook</option>
+                    <option value="23">Timberland</option>
+                    <option value="25">Veenker</option>
+                </select>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Slide for BldgType -->
+            <div class="slide">
+                <label for="bldgType">Type of Dwelling:</label>
+                <select id="bldgType" name="bldgType" required>
+                    <option value="" disabled selected>Select BldgType</option>
+                    <option value="1">Single-family Detached</option>
+                    <option value="2">Two-family Conversion</option>
+                    <option value="3">Duplex</option>
+                    <option value="4">Townhouse End Unit</option>
+                    <option value="5">Townhouse Inside Unit</option>
+                </select>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <label for="GarageType">Garage:</label>
+                <select id="GarageType" name="GarageType" required>
+                    <option value="" disabled selected>Do you have a garage?</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <label for="PoolQC">Pool:</label>
+                <select id="PoolQC" name="PoolQC" required>
+                    <option value="" disabled selected>Do you have a pool?</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Slide 4 -->
+            <!-- Slide for Basement -->
+            <div class="slide">
+                <label for="BsmtQual">Basement:</label>
+                <select id="BsmtQual" name="BsmtQual" required>
+                    <option value="" disabled selected>Do you have a basement?</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                
+                <!-- Square Footage Input (Initially Hidden) -->
+                <div id="bsmtSF-container" class="hidden">
+                    <label for="BsmtSF">Basement Square Footage:</label>
+                    <input 
+                        type="number" 
+                        id="BsmtSF" 
+                        name="BsmtSF" 
+                        placeholder="Enter square footage" 
+                        min="0"
+                    >
+                </div>
+                
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Slide for ExterQual -->
+            <div class="slide">
+                <label for="exterQual">Exterior Material Quality:</label>
+                <select id="exterQual" name="exterQual" required>
+                    <option value="" disabled selected>Select Exterior Quality</option>
+                    <option value="5">Excellent (Ex)</option>
+                    <option value="4">Good (Gd)</option>
+                    <option value="3">Average/Typical (TA)</option>
+                    <option value="2">Fair (Fa)</option>
+                    <option value="1">Poor (Po)</option>
+                </select>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Slide for ExterCond -->
+            <div class="slide">
+                <label for="exterCond">Exterior Condition:</label>
+                <select id="exterCond" name="exterCond" required>
+                    <option value="" disabled selected>Select Exterior Condition</option>
+                    <option value="5">Excellent (Ex)</option>
+                    <option value="4">Good (Gd)</option>
+                    <option value="3">Average/Typical (TA)</option>
+                    <option value="2">Fair (Fa)</option>
+                    <option value="1">Poor (Po)</option>
+                </select>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Slide for OverallQual -->
+            <div class="slide">
+                <label for="overallQual">Material & Finish Quality:</label>
+                <select id="overallQual" name="overallQual" required>
+                    <option value="" disabled selected>Rate Quality</option>
+                    <option value="10">Very Excellent</option>
+                    <option value="9">Excellent</option>
+                    <option value="8">Very Good</option>
+                    <option value="7">Good</option>
+                    <option value="6">Above Average</option>
+                    <option value="5">Average</option>
+                    <option value="4">Below Average</option>
+                    <option value="3">Fair</option>
+                    <option value="2">Poor</option>
+                    <option value="1">Very Poor</option>
+                </select>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Slide for OverallCond -->
+            <div class="slide">
+                <label for="overallCond">Overall Condition:</label>
+                <select id="overallCond" name="overallCond" required>
+                    <option value="" disabled selected>Rate Condition</option>
+                    <option value="10">Very Excellent</option>
+                    <option value="9">Excellent</option>
+                    <option value="8">Very Good</option>
+                    <option value="7">Good</option>
+                    <option value="6">Above Average</option>
+                    <option value="5">Average</option>
+                    <option value="4">Below Average</option>
+                    <option value="3">Fair</option>
+                    <option value="2">Poor</option>
+                    <option value="1">Very Poor</option>
+                </select>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide">
+                <label for="TotalLivingArea">Total Living Area (sqft):</label>
+                <input type="number" id="TotalLivingArea" name="TotalLivingArea" required>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide">
+                <label for="yearRemodAdd">Remodel Year:</label>
+                <input 
+                    type="number" 
+                    id="yearRemodAdd" 
+                    name="yearRemodAdd" 
+                    min="1900" 
+                    max="2025" 
+                    required
+                >
+                <span id="yearError" class="error-message"></span>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Final Slide (Result) -->
+            <div class="slide">
+                <h2>Your House Estimated Price is:</h2>
+                <h1 id="final-value">$0</h1>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit" id="calculate-btn">Calculate</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
